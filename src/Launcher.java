@@ -28,7 +28,7 @@ public class Launcher {
                 Scanner file = new Scanner(System.in);
                 String fileName = file.nextLine();
                 Count_words cw = new Count_words();
-                int res =cw.start_freq();
+                int res =cw.start_freq(fileName);
                 System.out.println(res);
 
 

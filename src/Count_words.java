@@ -10,30 +10,40 @@ import java.util.HashMap;
 import java.util.Map;
 public  class Count_words{
 
-    public static int start_freq() throws IOException {
+    public static int start_freq(String File) throws IOException {
         String fileName = "/home/nicolas/Bureau/test.txt";
-        String line = null;
+        BufferedReader br = new BufferedReader(new FileReader(File));
         try {
-            FileReader fileReader = new FileReader(fileName);
-            BufferedReader bufferedReader = new BufferedReader(fileReader);
-            String[] tot= new String[100];
-            while((line = bufferedReader.readLine()) != null) {
-                String[] words = line.split(" ");
-                words = sortWordsViaFrequencies(words);
-                for (int i = 0; i < 3; i ++){
-                    System.out.print(words[i]+" ");
-                };
+            StringBuilder sb = new StringBuilder();
+            String line = br.readLine();
 
+            while (line != null) {
+                sb.append(line);
+                sb.append(System.lineSeparator());
+                line = br.readLine();
+            }
+            String everything = sb.toString();
+            String[] words = everything.split(" ");
+            words = sortWordsViaFrequencies(words);
 
-        }            bufferedReader.close();
-
-    }
+            if(words.length>=3){
+                for(int i=0;i<3;i++){
+                    System.out.println(words[i]);
+                }
+            }else{
+                System.out.println("");
+            }
+            //System.out.println(Arrays.asList(words));
+        } 
         catch(FileNotFoundException ex) {
             System.out.println("Unreadable file: " + fileName );
         }
         catch(IOException ex) {
             System.out.println("Error reading file '" + fileName + "': " + ex.getMessage());
             ex.printStackTrace();
+        }
+        finally {
+            br.close();
         }
         return 0;
 
