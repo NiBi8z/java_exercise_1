@@ -1,7 +1,13 @@
 import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
 
 public class Launcher {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         System.out.println("Bienvenue sur le launcher");
 
         while(true) {
@@ -17,6 +23,16 @@ public class Launcher {
                 int res = start_fibo(n);
                 System.out.println(res);
 
+            }else if(txt.equals("freq")){
+                System.out.println("Veuillez choisir le fichier");
+                Scanner file = new Scanner(System.in);
+                String fileName = file.nextLine();
+                Count_words cw = new Count_words();
+                int res =cw.start_freq();
+                System.out.println(res);
+
+
+
             }else {
                 System.out.println("Unknown command");
             }
@@ -31,3 +47,4 @@ public class Launcher {
                 return start_fibo(n - 1) + start_fibo(n - 2);
         }
         }
+
