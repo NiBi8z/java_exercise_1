@@ -18,7 +18,7 @@ public  class Count_words{
             String line = br.readLine();
 
             while (line != null) {
-                sb.append(line);
+                sb.append(line.toLowerCase());
                 sb.append(System.lineSeparator());
                 line = br.readLine();
             }
@@ -33,7 +33,7 @@ public  class Count_words{
             }else{
                 System.out.println("");
             }
-            //System.out.println(Arrays.asList(words));
+           // System.out.println(Arrays.asList(words));
         } 
         catch(FileNotFoundException ex) {
             System.out.println("Unreadable file: " + fileName );
