@@ -29,9 +29,7 @@ public class Launcher {
                 String fileName = file.nextLine();
                 Count_words cw = new Count_words();
                 int res =cw.start_freq(fileName);
-                System.out.println(res);
-
-
+               // System.out.println(res);
 
             }else {
                 System.out.println("Unknown command");

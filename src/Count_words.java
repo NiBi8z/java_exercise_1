@@ -28,7 +28,7 @@ public  class Count_words{
 
             if(words.length>=3){
                 for(int i=0;i<3;i++){
-                    System.out.println(words[i]);
+                    System.out.print(words[i]+" ");
                 }
             }else{
                 System.out.println("");
