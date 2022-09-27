@@ -16,7 +16,7 @@ public class Freq implements Command {
 
     @Override
     public boolean run(Scanner scanner) {
-        System.out.print("Chemin du fichier a analyser: ");
+        System.out.print("Chemin du fichier: ");
         String path = scanner.nextLine();
         freq(path);
         return false;

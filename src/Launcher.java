@@ -11,7 +11,7 @@ import java.util.stream.Stream;
 
 public class Launcher {
     public static void main(String[] args) {
-        System.out.println("bienvenue");
+        System.out.println("Bienvenue sur le Launcher");
         Scanner scanner = new Scanner(System.in);
         List<Command> commands = new ArrayList<>();
         commands.add(new Fibo());
@@ -21,7 +21,7 @@ public class Launcher {
         String response;
         boolean found;
         while (true){
-            System.out.print("command:");
+            System.out.print("Entrez une commande:");
             response = scanner.nextLine().toLowerCase();
             found = false;
             for (Command command : commands){

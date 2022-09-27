@@ -10,14 +10,14 @@ public class Fibo implements Command {
 
     @Override
     public boolean run(Scanner scanner) {
-        System.out.print("n=");
+        System.out.print("Entrez n");
         try{
             int n = scanner.nextInt();
             scanner.nextLine();
             int res = fibo(n);
             System.out.println(res);
         }catch (Exception e){
-            System.out.println("n n'est pas valide !");
+            System.out.println("Erreur avec N");
         }
         return false;
     }

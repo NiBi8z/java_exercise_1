@@ -13,9 +13,9 @@ public class Predict implements Command {
 
     @Override
     public boolean run(Scanner scanner) {
-        System.out.print("Chemin du fichier a analyser: ");
+        System.out.print("Chemin du fichier: ");
         String path = scanner.nextLine();
-        System.out.print("Premier mot: ");
+        System.out.print("Quel est le premier mot : ");
         String first = scanner.nextLine();
         predict(path, first);
         return false;
