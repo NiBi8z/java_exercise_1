@@ -11,7 +11,6 @@ import java.util.Map;
 public  class Count_words{
 
     public static int start_freq(String File) throws IOException {
-        String fileName = "/home/nicolas/Bureau/test.txt";
         BufferedReader br = new BufferedReader(new FileReader(File));
         try {
             StringBuilder sb = new StringBuilder();
@@ -33,13 +32,13 @@ public  class Count_words{
             }else{
                 System.out.println("");
             }
-           // System.out.println(Arrays.asList(words));
+            System.out.println(Arrays.asList(words));
         } 
         catch(FileNotFoundException ex) {
-            System.out.println("Unreadable file: " + fileName );
+            System.out.println("Unreadable file: " + File );
         }
         catch(IOException ex) {
-            System.out.println("Error reading file '" + fileName + "': " + ex.getMessage());
+            System.out.println("Error reading file '" + File + "': " + ex.getMessage());
             ex.printStackTrace();
         }
         finally {
